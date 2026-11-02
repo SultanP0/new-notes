@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Database (holds your real notes)
+notes.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
