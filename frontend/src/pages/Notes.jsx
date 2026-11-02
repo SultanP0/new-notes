@@ -38,6 +38,7 @@ function Notes() {
   return (
     <div>
       <h1>Notes Page</h1>
+      {notes.length === 0 && <p>No notes yet.</p>}
       <ul>
         {notes.map((note) => (
           <li key={note.id}>

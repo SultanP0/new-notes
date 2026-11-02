@@ -3,13 +3,29 @@ import { useState } from "react";
 function AddNote() {
   const [text, setText] = useState("");
 
-  function handleAdd() {
-fetch("http://127.0.0.1:5000/notes", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ text: text }),
-}).then(() => setText(""))
+
+function handleAdd() {
+  if (text.trim() === "") {
+    return;
+  }
+
+  fetch("http://127.0.0.1:5000/notes", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text: text }),
+  }).then(() => setText(""));
 }
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <div>
